@@ -1,0 +1,61 @@
+$pale-blue : #dee2ff;
+$pale-purple: #feeafa;
+$pale-pink : #EFD3D7;
+$lavander: #CBC0D3;
+$manatee: #8E9AAF;
+$light-grey: #e9ecef;
+$medium-grey: #ced4da;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
+
+.header {
+    background-color: white;
+    box-shadow: $light-shadow;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+        width: auto;
+        height: 8rem;
+        margin: 1rem 3rem;
+    }
+
+    &_searchbar {
+        flex: 0 0 30%;
+        margin-right: -3rem;
+        font-size: 1.6rem;
+        padding: 0 1rem;
+        height: 3rem;
+        border-radius: 5rem;
+        box-shadow: none;
+        border: none;
+        background-color: $medium-grey;
+        opacity: 0.9;
+        font-family: 'Source Sans Pro', sans-serif;
+        transition: all .3s;
+        
+        &:focus,
+        &:active,
+        &:hover {
+            opacity: 1;
+            outline: none;
+        }
+        
+    }
+
+    &_user-info {
+        display: flex;
+        margin: 1rem 2rem;
+        font-size: 1.8rem;
+        justify-content: space-between;
+        font-weight: 600;
+        color: $pale-pink;
+
+        a {
+            margin: 0 1rem;
+        }
+        
+    }
+}

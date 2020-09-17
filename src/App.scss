@@ -1,0 +1,81 @@
+$pale-blue : #dee2ff;
+$pale-purple: #feeafa;
+$pale-pink : #EFD3D7;
+$lavander: #CBC0D3;
+$manatee: #8E9AAF;
+$light-grey: #e9ecef;
+$medium-grey: #ced4da;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: $lavander;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom right,$lavander, $pale-pink);
+  background-size: cover;
+  min-height: 100vh;
+  line-height: 1.7;
+  color: $manatee;
+}
+
+
+.intro-item-enter {
+    opacity: 0;
+  }
+  .intro-item-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+  .intro-item-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .intro-item-exit-active {
+    opacity: 1;
+    transform: translateY(-150rem);
+    transition: all 700ms;
+  }
+
+  .main-app-enter {
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  .main-app-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms;
+  }
+
+  .app-layout {
+    // max-width: 150rem;
+    width:80vw;
+    margin: 3rem auto;
+    background-color: $light-grey;
+    box-shadow: $dark-shadow;
+    min-height: 90vh;
+
+  }

@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState} from 'react';
+import { CSSTransition } from 'react-transition-group'
+import './App.scss'
 
-function App() {
+import Intro from './components/intro/intro.component';
+import Header from './components/header/header.component';
+
+
+const App = () => {
+  const [isIntroVisibile, setIntroVisibility] = useState(true)
+  const [isAppVisible, setAppVisibility] = useState(false)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <CSSTransition 
+      in={isIntroVisibile}
+      timeout={300}
+      classNames='intro-item'
+      unmountOnExit
+      onExited={() => setAppVisibility(true)}>
+          <Intro clicked={() => setIntroVisibility(false)}/>
+      </CSSTransition>
+      <CSSTransition
+      in={isAppVisible}
+      timeout={300}
+      classNames='main-app'>
+        <div className='app-layout'>
+          <Header/>
+          <div className='app-content'>
+            navigation
+            pages
+          </div>
+        </div>
+        </CSSTransition>
+    </Fragment>
+  )
 }
 
 export default App;

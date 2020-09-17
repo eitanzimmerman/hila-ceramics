@@ -1,0 +1,32 @@
+$pale-blue : #dee2ff;
+$pale-purple: #feeafa;
+$pale-pink : #EFD3D7;
+$lavander: #CBC0D3;
+$manatee: #8E9AAF;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background-image: linear-gradient(to bottom right, $pale-blue, &pale-pink);
+
+}

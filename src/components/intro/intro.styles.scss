@@ -1,0 +1,102 @@
+$pale-blue : #dee2ff;
+$pale-purple: #feeafa;
+$pale-pink : #EFD3D7;
+$lavander: #CBC0D3;
+$manatee: #8E9AAF;
+
+
+
+.intro {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.253)) ,url('../../assets/img/studio.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position:top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_title {
+        font-family: 'Crimson Text', serif;
+        font-size: 15rem;
+        color: $pale-pink;
+        line-height: 1.3;
+        font-style: italic;
+        margin-top: 10rem;
+        opacity: 1;
+        animation: FadeIn 0.5s ease ;
+        animation-fill-mode: backwards;
+    }
+
+        &_subtitle{
+            font-size: 6rem;
+            font-weight: 200;
+            color: $lavander;
+            margin-bottom: 5rem;
+            animation: revealTitle 0.7s ease 0.7s ;
+            animation-fill-mode: backwards;
+        }
+
+        &_button {
+            min-width: 1.65rem;
+            width: auto;
+            height: 3rem;
+            letter-spacing: 0.5px;
+            line-height: 50px;
+            font-size: 2rem;
+            border: 1px solid $pale-pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.8rem;
+            font-weight: 200;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $pale-pink;
+            background: transparent;
+            border-radius: .4rem;
+            transition: all 0.3s;
+            animation: FadeIn 0.5s ease 1.5s ;
+            animation-fill-mode: backwards;
+
+            &:hover {
+                background-color: $pale-pink;
+                color: black;
+            }
+
+            &:active
+            {
+                border: 1px solid $manatee;
+                outline: none;
+                transform: translateY(-0.05rem) scaleX(0.98);
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+  
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes revealTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+
+

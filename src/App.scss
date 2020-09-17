@@ -35,7 +35,7 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right,$lavander, $pale-pink);
+  background-image: linear-gradient(to bottom right,$lavander, white);
   background-size: cover;
   min-height: 100vh;
   line-height: 1.7;
@@ -76,6 +76,11 @@ body {
     margin: 3rem auto;
     background-color: $light-grey;
     box-shadow: $dark-shadow;
-    min-height: 90vh;
+    max-height: 90vh;
+    overflow: hidden;
 
+  }
+
+  .app-content {
+    display: flex;
   }

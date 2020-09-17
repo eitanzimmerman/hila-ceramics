@@ -1,0 +1,48 @@
+$pale-blue : #dee2ff;
+$pale-purple: #feeafa;
+$pale-pink : #EFD3D7;
+$lavander: #CBC0D3;
+$manatee: #8E9AAF;
+$light-grey: #e9ecef;
+$medium-grey: #ced4da;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 1rem 0rem 4rem rgba(0, 0, 0, 0.089);
+
+.navigation {
+    background-color:$lavander;
+    height: 90vh;
+    flex: 0 0 8%;
+    transition: all .3s ease-out;
+    box-shadow: $light-shadow;
+    
+    &:hover{
+        flex: 0 0 22%
+    }
+
+    &_side-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+
+        a{
+            color: $pale-purple;
+        }
+        &_item{
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            transition: all .1s ease-in;
+            
+            &::before{
+                content: '/ ';
+            }
+
+            &:hover {
+                transform: translateX(1rem);
+            }
+
+
+        }
+    }
+
+}

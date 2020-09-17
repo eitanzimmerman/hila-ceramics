@@ -4,6 +4,7 @@ import './App.scss'
 
 import Intro from './components/intro/intro.component';
 import Header from './components/header/header.component';
+import Nav from './components/navigation/nav.component';
 
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
         <div className='app-layout'>
           <Header/>
           <div className='app-content'>
-            navigation
+            <Nav />
             pages
           </div>
         </div>

@@ -1,9 +1,7 @@
-$pale-blue : #dee2ff;
-$pale-purple: #feeafa;
-$pale-pink : #EFD3D7;
-$lavander: #CBC0D3;
-$manatee: #8E9AAF;
-$light-grey: #e9ecef;
+$main-color : #b36a5e;
+$secondary-color: #d3a08e;
+$light-cream: #fff1e6;
+$light-grey: #f0f0f0;
 $medium-grey: #ced4da;
 $dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
 $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
@@ -21,7 +19,7 @@ $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
 
 a {
     text-decoration: none;
-    color: $lavander;
+    color: $light-cream;
 }
 
 html {
@@ -35,11 +33,11 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right,$lavander, white);
+  background-color: $light-cream;
   background-size: cover;
   min-height: 100vh;
   line-height: 1.7;
-  color: $manatee;
+  color: $main-color;
 }
 
 
@@ -72,15 +70,17 @@ body {
 
   .app-layout {
     // max-width: 150rem;
-    width:80vw;
-    margin: 3rem auto;
-    background-color: $light-grey;
+    width:90vw;
+    margin: 2rem auto;
+    background-color: rgb(255, 255, 255);
     box-shadow: $dark-shadow;
-    max-height: 90vh;
-    overflow: hidden;
+    // max-height: 100vh;
+    // overflow: hidden;
 
   }
 
   .app-content {
+    min-height: 100vh;
     display: flex;
+    align-items: stretch;
   }

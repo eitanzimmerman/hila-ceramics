@@ -2,9 +2,13 @@ import React, { Fragment, useState} from 'react';
 import { CSSTransition } from 'react-transition-group'
 import './App.scss'
 
+import { Switch, Route } from 'react-router-dom'
+
 import Intro from './components/intro/intro.component';
 import Header from './components/header/header.component';
 import Nav from './components/navigation/nav.component';
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
 
 
 const App = () => {
@@ -27,10 +31,13 @@ const App = () => {
       classNames='main-app'>
         <div className='app-layout'>
           <Header/>
-          <div className='app-content'>
+          <main className='app-content'>
             <Nav />
-            pages
-          </div>
+            <Switch>
+              <Route exact path='/' component={HomePage}/>
+              <Route exact path='/shop' component={ShopPage} />
+            </Switch>
+          </main>
         </div>
         </CSSTransition>
     </Fragment>

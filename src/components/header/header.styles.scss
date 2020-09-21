@@ -1,15 +1,13 @@
-$pale-blue : #dee2ff;
-$pale-purple: #feeafa;
-$pale-pink : #EFD3D7;
-$lavander: #CBC0D3;
-$manatee: #8E9AAF;
-$light-grey: #e9ecef;
+$main-color : #b36a5e;
+$secondary-color: #d3a08e;
+$light-cream: #fff1e6;
+$light-grey: #f0f0f0;
 $medium-grey: #ced4da;
 $dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
 $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
 
 .header {
-    background-color: white;
+    background-color: $main-color;
     box-shadow: $light-shadow;
     height: 10rem;
     display: flex;
@@ -19,7 +17,7 @@ $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
     &_logo {
         width: auto;
         height: 8rem;
-        margin: 1rem 3rem;
+        margin-left: -2rem;
     }
 
     &_searchbar {
@@ -31,15 +29,17 @@ $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
         border-radius: 5rem;
         box-shadow: none;
         border: none;
-        background-color: $medium-grey;
+        background-color: $light-cream;
         opacity: 0.9;
         font-family: 'Source Sans Pro', sans-serif;
-        transition: all .3s;
+        color: $main-color;
+        transition: all .2s;
         
         &:focus,
         &:active,
         &:hover {
             opacity: 1;
+            transform: scaleX(1.04);
             outline: none;
         }
         
@@ -51,11 +51,18 @@ $light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
         font-size: 1.8rem;
         justify-content: space-between;
         font-weight: 600;
-        color: $pale-pink;
+        color: $light-cream;
 
         a {
             margin: 0 1rem;
+            transition: all .2s ;
+
+            &:hover {
+                transform: translateY(-0.4rem);
+            }
         }
+
+        
         
     }
 }

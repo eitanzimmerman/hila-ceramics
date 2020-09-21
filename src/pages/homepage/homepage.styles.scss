@@ -1,0 +1,19 @@
+.homepage {
+    background-image: url('../../assets/img/studio2.jpg');
+    background-size:cover;
+    background-position: bottom;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_titles {
+        align-self: center;
+
+        &_main {
+            font-size: 5rem;
+        }
+    }
+
+
+}

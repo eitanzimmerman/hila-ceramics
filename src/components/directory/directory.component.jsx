@@ -6,12 +6,12 @@ import { SHOP_DATA } from '../../data/data';
 import ShopItem from '../shop-item/shop-item.component';
 
 const Directory = () => {
+    const shopCollection = Object.keys(SHOP_DATA).map(key => SHOP_DATA[key])
     return (
         <div className='directory'>
-            {SHOP_DATA.map(item => {
+            {shopCollection.map(item => {
                 return <CSSTransition><ShopItem  key={item.id} item={item}/></CSSTransition>
             })
-
             }
         </div>
     )

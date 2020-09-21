@@ -1,0 +1,75 @@
+$light-cream: #fff1e6;
+$main-color : #b36a5e;
+
+.category {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+
+    &_header{
+        flex: 0 0 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+        background-size: cover;
+        color: $light-cream;
+    }
+
+    &_content {
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+
+        &_info-box {
+            flex: 0 0 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        &_gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow: hidden;
+
+
+            &_item {
+                flex: 1;
+                height: 27rem;
+                width: 22rem;
+                margin: 0 2rem;
+                background-position: center;
+                border-radius: 0.5rem;
+                background-size: cover;
+                transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover {
+                    flex:3;
+                }
+            }
+        }
+    }
+
+    .return-icon {
+        top: 0;
+        left: 0;
+        fill: $main-color;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: translateX(-0.5rem);
+        }
+    }
+}

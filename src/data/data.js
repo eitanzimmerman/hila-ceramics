@@ -1,8 +1,9 @@
- export const SHOP_DATA = [
-   {
+ export const SHOP_DATA = {
+   necklaces: {
         id: 1,
         title: "Necklaces",
         background: 'jwellery-main.jpg',
+        route: '/necklaces',
         price: [120, 80, 50],
         images: [
             {
@@ -22,10 +23,11 @@
             },
         ]
     },
-    {
+    bowls: {
         id: 2,
         title: "Bowls",
         background: 'bowls-main.jpg',
+        route: '/bowls',
         price: [150, 120, 80],
         images: [
             {
@@ -46,10 +48,11 @@
         ]
     },
 
-     {
+     mugs: {
         id: 3,
         title: "Mugs",
         background: 'mugs-main.jpg',
+        route: '/mugs',
         price: [70, 50, 30],
         images: [
             {
@@ -65,10 +68,11 @@
         ]
     },
 
-    {
+    covers: {
         id: 4,
         title: "Bowl cover",
         background: 'bowl-with-cover.jpg',
+        route: '/covers',
         price: [50, 30, 15],
         images: [
             {
@@ -79,10 +83,11 @@
         ]
     },
 
-    {
+    vasas: {
         id: 5,
         title: "Vasas",
         background: 'vasas-main.jpg',
+        route: '/vasas',
         price: [120, 80, 60],
         images: [
             {
@@ -102,4 +107,4 @@
             },
         ]
     }
- ]
+}

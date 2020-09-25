@@ -1,0 +1,44 @@
+$main-color : #b36a5e;
+$light-cream: #fff1e6;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
+
+.cart-icon {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-color;
+    right: 90px;
+    padding: 1.2rem;
+    border-radius: 300px;
+    
+    opacity: 0.8;
+    z-index: 100;
+ 
+    transition: all .3s;
+    
+    .shopping-icon {
+        fill: $light-cream;
+        width: auto;
+        height: 25px;
+    }
+
+    &:hover {
+        opacity: 1;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+    }
+
+    &:active {
+        opacity: 1;
+        transform: translateY(-0.05rem);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.4);
+    }
+    .item-count {
+        position: absolute;
+        font-size: 1.1rem;
+        color: $main-color;
+        bottom: 19px;
+      }
+}

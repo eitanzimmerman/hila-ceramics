@@ -1,0 +1,43 @@
+$main-color : #b36a5e;
+$secondary-color: #d3a08e;
+$light-cream: #fff1e6;
+$light-grey: #f0f0f0;
+$medium-grey: #ced4da;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
+
+
+
+.cart-menu{
+    position: absolute;
+    height: 100vh;
+    right: 5;
+    margin-left: auto;
+    width: 20%;
+    z-index: 10;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+
+        &_item {
+            flex: 5;
+            margin-left: 2rem;
+        }
+
+        &_size {
+            flex: 1;
+        }
+
+        &_quantity {
+            flex: 1;
+            margin-right: .3rem;
+        }
+    }
+}

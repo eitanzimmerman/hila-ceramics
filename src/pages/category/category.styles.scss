@@ -5,11 +5,13 @@ $main-color : #b36a5e;
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow: hidden;
     
 
     &_header{
-        flex: 0 0 25%;
+        flex: 0 0 30%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -19,11 +21,11 @@ $main-color : #b36a5e;
     }
 
     &_content {
-        flex: 1;
+        flex: 0;
         display: flex;
         justify-content: space-evenly;
         flex-direction: row-reverse;
-        margin-top: 2rem;
+        margin-bottom: 3rem;
 
         &_info-box {
             flex: 0 0 20%;
@@ -32,7 +34,7 @@ $main-color : #b36a5e;
             align-items: center;
 
             p {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -45,13 +47,13 @@ $main-color : #b36a5e;
 
             &_item {
                 flex: 1;
-                height: 27rem;
-                width: 22rem;
+                height: 30rem;
+                width: 25rem;
                 margin: 0 2rem;
                 background-position: center;
                 border-radius: 0.5rem;
                 background-size: cover;
-                transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: all 2s cubic-bezier(0.3, 1, 0.3, 1);
 
                 &:hover {
                     flex:3;
@@ -60,12 +62,90 @@ $main-color : #b36a5e;
         }
     }
 
+    &_paybox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 100%;
+        align-items: center;
+        color: $main-color;
+
+            
+        .paybox_title {
+            margin: 1rem 0;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .paybox_options {
+            margin: 1rem 0;
+            width: 15%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .option {
+                font-size: 1.5rem;
+                border: 1px solid $main-color;
+                background: none;
+                color: $main-color;
+                font-family: 'Source Sans Pro', sans-serif;
+                padding: 0.25rem 1rem;
+                transition: all .3s ease;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    outline: none;
+                    cursor: pointer;
+                    background-color: $main-color;
+                    color: $light-cream;
+                }
+
+                
+            }
+
+        }
+        .paybox_button{
+            margin-top: 1rem;
+            background: none;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            outline: none;
+            border-radius: .3rem;
+            border: 2px solid $main-color;
+            color: $main-color;
+            transition: all .3s ease;
+
+            &:focus,
+            &:active {
+                outline: none;
+                
+                
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $main-color;
+                color: $light-cream;
+            }
+        }
+    }
+    
+
+
     .return-icon {
-        top: 0;
-        left: 0;
         fill: $main-color;
-        margin-top: 3rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
         margin-left: 3rem;
+        align-self: flex-start;
         transition: all .3s ease;
 
         &:hover{

@@ -1,0 +1,31 @@
+$main-color : #b36a5e;
+$secondary-color: #d3a08e;
+$light-cream: #fff1e6;
+$light-grey: #f0f0f0;
+$medium-grey: #ced4da;
+$dark-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+$light-shadow: 0 1rem 4rem rgba(0,0,0, .2);
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    background-color: $light-grey;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #e7e7e7;
+        opacity: 1;
+    }
+
+    &_photo {
+        width: auto;
+        height: 10rem;
+        max-height: 15rem;
+        flex: 0 1;
+    }
+}

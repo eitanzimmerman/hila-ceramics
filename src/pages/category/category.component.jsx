@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import './category.styles.scss';
 import {ReactComponent as BackIcon} from '../../assets/icons/arrow-left2.svg';
-import {withRouter} from 'react-router-dom'
-import { SHOP_DATA } from '../../data/data';
+import { selectCollection } from '../../redux/shop/shop.selectors';
+import {withRouter} from 'react-router-dom';
+
+import { addItem } from '../../redux/cart/cart.actions'
 
 
 
-const Category = ({match, history}) => {
-    const collection = SHOP_DATA[match.params.category]
+
+const Category = ({ history, collection, addItem}) => {
     const background = require(`../../assets/img/${collection.background}`)
     const photos = collection.images.map(item => {
         return {photo : require(`../../assets/img/${item.photo}`), title: item.name }
     })
+
+    const [item, setItemCredentials] = useState({id: collection.id, title: collection.title, size: '', item_background: collection.background})
+    
+    const handleSize = (size) => {
+        setItemCredentials({...item, size: size})
+    }
+
+    const handleAddToCart = () => {
+        if ( ! item.size ) {
+            alert("must pick a size")
+            return
+        }
+        addItem(item)
+    }
+
     return (
         <div className='category'>
             <div className='category_header' 
@@ -26,9 +44,7 @@ const Category = ({match, history}) => {
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, consequatur perferendis! In sunt praesentium doloribus eum ex repellendus aut voluptas</p>
                     <h2>Pricing</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta minima nobis voluptatem facere id! Ducimus ipsam aliquam, quo necessitatibu</p>
-                    <p>S : </p>
-                    <p>M : </p>
-                    <p>L : </p>
+                    <p>S : , M : , L : </p>
                 </div>
                 <div className='category_content_gallery'>
                     {
@@ -38,11 +54,27 @@ const Category = ({match, history}) => {
                                     </div>
                         })
                     }
-
                 </div>
+            </div>
+            <div className='category_paybox'>
+                    <div className='paybox_options'>
+                        <button className='option' onClick={() => handleSize('S')}> S </button>
+                        <button className='option' onClick={() => handleSize('M')}> M </button>
+                        <button className='option' onClick={() => handleSize('L')}> L </button>
+                    </div>
+                    <button className='paybox_button' onClick={handleAddToCart}>add to cart</button>
             </div>
         </div>
     )
 };
 
-export default withRouter(Category);
+
+const mapStateToProps = (state, ownProps) => ({
+    collection : selectCollection(ownProps.match.params.category)(state)
+})
+
+const mapDispatchToProps = dispatch => ({
+    addItem : (item) => dispatch(addItem(item))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Category));

@@ -70,12 +70,13 @@ body {
 
   .app-layout {
     // max-width: 150rem;
+    // 
     width:90vw;
     margin: 2rem auto;
     background-color: rgb(255, 255, 255);
     box-shadow: $dark-shadow;
     // max-height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
 
   }
 
@@ -83,4 +84,24 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: stretch;
+  }
+
+
+  .cart-items-enter {
+    opacity: 0;
+    transform: translateX(-40rem);
+  }
+  .cart-items-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms;
+  }
+  .cart-items-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .cart-items-exit-active {
+    opacity: 1;
+    transform: translateX(-150rem);
+    transition: all 300ms;
   }

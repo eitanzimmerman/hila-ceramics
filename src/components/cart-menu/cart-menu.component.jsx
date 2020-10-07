@@ -9,14 +9,14 @@ const CartMenu = ({ cartItems }) => {
     const errMessage = 'No items in cart'
     return (
         <div className='cart-menu'>
-            <div className='cart-menu_header'>
+            {/* <div className='cart-menu_header'>
                 <span className='cart-menu_header_item'>Item</span>
                 <span className='cart-menu_header_size'>Size</span>
                 <span className='cart-menu_header_quantity'>Quantity</span>
-            </div>
+            </div> */}
             {   cartItems.length ?
-                cartItems.map(item => <CartItem key={item.id} size={item.size} title={item.title} photo={item.item_background} quantity={item.quantity}/>)
-                : <p>errMessage</p>
+                cartItems.map(item => <CartItem key={item.id} item={item} size={item.size} title={item.title} photo={item.item_background} quantity={item.quantity}/>)
+                : <p>{errMessage}</p>
             }
         </div>
     )

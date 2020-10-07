@@ -49,7 +49,7 @@ const Category = ({ history, collection, addItem}) => {
                 <div className='category_content_gallery'>
                     {
                         photos.map( item => {
-                            return <div className='category_content_gallery_item'
+                            return <div  className='category_content_gallery_item'
                                     style={{backgroundImage: `url(${item.photo})`}}>
                                     </div>
                         })
